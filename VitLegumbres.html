@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitaminas en Legumbre</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <style>
+        body {font-family: Arial, sans-serif;margin: 20px;
+            text-align: center;background-color: #85929e;}
+        .container {max-width: 100%;margin: 0 auto;padding: 15px;background: white;
+        border-radius: 10px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        .table-wrapper {overflow-x: auto;}
+        table {width: 100%;border-collapse: collapse;min-width: 600px;}
+        th, td {border: 1px solid black;padding: 8px;text-align: center;font-size: 14px;}
+        th {background-color: #f06292;}
+        .narrow {width: 50px; /* Columnas más angostas */}
+        @media screen and (max-width: 768px) {th, td {font-size: 12px;padding: 6px;}}
+    </style>
+</head>
+<body>
+
+    <h2>Contenido de Vitaminas en 100g de Legumbre</h2>
+
+    <div class="container">
+        <div class="table-wrapper">
+            <table id="tablaVitaminasLegumbre">
+
+              <thead>
+                  <tr>
+                      <th>Legumbre</th>
+                      <th class="narrow">A (&#181;g)</th>
+                      <th class="narrow">B1 (mg)</th>
+                      <th class="narrow">B2 (mg)</th>
+                      <th class="narrow">B3 (mg)</th>
+                      <th class="narrow">B5 (mg)</th>
+                      <th class="narrow">B6 (mg)</th>
+                      <th class="narrow">B7 (mg)</th>
+                      <th class="narrow">B9 (&#181;g)</th>
+                      <th class="narrow">C (mg)</th>
+                      <th class="narrow">E (mg)</th>
+                      <th class="narrow">K (&#181;g)</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr><td>Lentejas</td><td>8</td><td>0.34</td><td>0.14</td><td>2.6</td><td>1.3</td><td>0.54</td><td>0.6</td><td>479</td><td>4.5</td><td>0.5</td><td>1.7</td></tr>
+                  <tr><td>Garbanzos</td><td>3</td><td>0.48</td><td>0.21</td><td>1.5</td><td>1.6</td><td>0.54</td><td>0.6</td><td>557</td><td>4.0</td><td>0.8</td><td>2.0</td></tr>
+                  <tr><td>Frijoles (Porotos)</td><td>0</td><td>0.41</td><td>0.21</td><td>2.1</td><td>1.2</td><td>0.52</td><td>0.6</td><td>394</td><td>5.1</td><td>0.3</td><td>3.5</td></tr>
+                  <tr><td>Habas</td><td>14</td><td>0.56</td><td>0.20</td><td>2.9</td><td>0.9</td><td>0.36</td><td>0.6</td><td>423</td><td>33</td><td>0.6</td><td>5.6</td></tr>
+                  <tr><td>Guisantes (Arvejas)</td><td>38</td><td>0.27</td><td>0.15</td><td>2.0</td><td>0.9</td><td>0.22</td><td>0.6</td><td>65</td><td>40</td><td>0.1</td><td>24.8</td></tr>
+                  <tr><td>Soja</td><td>2</td><td>0.85</td><td>0.28</td><td>1.1</td><td>0.7</td><td>0.38</td><td>0.6</td><td>375</td><td>6.0</td><td>0.2</td><td>47</td></tr>
+              </tbody>
+          </table><br>       
+        </div><br>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#tablaVitaminasLegumbre').DataTable({
+                paging: false,
+                searching: false,
+                ordering: true,
+                info: false
+            });
+        });
+    </script>
+
+</body>

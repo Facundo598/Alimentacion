@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitaminas en Verduras</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+  	    <style>
+        body {font-family: Arial, sans-serif;margin: 20px;
+            text-align: center;background-color: #85929e;}
+        .container {max-width: 100%;margin: 0 auto;padding: 15px;background: white;
+        border-radius: 10px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        .table-wrapper {overflow-x: auto;}
+        table {width: 100%;border-collapse: collapse;min-width: 600px;}
+        th, td {border: 1px solid black;padding: 8px;text-align: center;font-size: 14px;}
+        th {background-color: #f06292;}
+        .narrow {width: 50px; /* Columnas más angostas */}
+        @media screen and (max-width: 768px) {th, td {font-size: 12px;padding: 6px;}}
+    </style>
+
+</head>
+<body>
+
+    <h2>Contenido de Vitaminas en 100g de Verduras</h2>
+
+    <div class="container">
+        <div class="table-wrapper">
+            <table id="tablaVitaminas">
+                <thead>
+                    <tr>
+                        <th>Verdura</th>
+                        <th class="narrow">A (µg)</th>
+                        <th class="narrow">B1 (mg)</th>
+                        <th class="narrow">B2 (mg)</th>
+                        <th class="narrow">B3 (mg)</th>
+                        <th class="narrow">B5 (mg)</th>
+                        <th class="narrow">B6 (mg)</th>
+                        <th class="narrow">B7 (mg)</th>
+                        <th class="narrow">B9 (µg)</th>
+                        <th class="narrow">C (mg)</th>
+                        <th class="narrow">E (mg)</th>
+                        <th class="narrow">K (µg)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   	<tr><td>Zanahoria</td><td>835</td><td>0.066</td><td>0.058</td><td>1.1</td><td>0.273</td><td>0.138</td><td>0.6</td><td>19</td><td>5.9</td><td>0.66</td><td>13.2</td></tr>
+                    <tr><td>Tomate</td><td>42</td><td>0.037</td><td>0.019</td><td>0.594</td><td>0.089</td><td>0.08</td><td>0.6</td><td>15</td><td>13.7</td><td>0.54</td><td>7.9</td></tr>
+                    <tr><td>Pepino</td><td>105</td><td>0.027</td><td>0.033</td><td>0.267</td><td>0.259</td><td>0.04</td><td>0.6</td><td>14</td><td>2.8</td><td>0.03</td><td>16.4</td></tr>
+                    <tr><td>Lechuga</td><td>740</td><td>0.057</td><td>0.062</td><td>0.375</td><td>0.134</td><td>0.09</td><td>0.6</td><td>38</td><td>9.2</td><td>0.22</td><td>126</td></tr>
+                    <tr><td>Palta (Aguacate)</td><td>146</td><td>0.067</td><td>0.130</td><td>1.738</td><td>1.389</td><td>0.257</td><td>0.6</td><td>81</td><td>10</td><td>2.07</td><td>21</td></tr>
+                    <tr><td>Pimiento rojo</td><td>313</td><td>0.054</td><td>0.085</td><td>0.979</td><td>0.317</td><td>0.291</td><td>0.6</td><td>27</td><td>127.7</td><td>1.58</td><td>7.4</td></tr>
+                    <tr><td>Pimiento amarillo</td><td>200</td><td>0.05</td><td>0.08</td><td>1.0</td><td>0.3</td><td>0.3</td><td>0.6</td><td>26</td><td>183</td><td>1.6</td><td>9.0</td></tr>
+                    <tr><td>Pimiento verde</td><td>110</td><td>0.05</td><td>0.09</td><td>0.9</td><td>0.25</td><td>0.2</td><td>0.6</td><td>23</td><td>80.4</td><td>0.7</td><td>10.2</td></tr>
+                    <tr><td>Espinaca</td><td>469</td><td>0.078</td><td>0.189</td><td>0.724</td><td>0.065</td><td>0.195</td><td>0.6</td><td>194</td><td>28.1</td><td>2.03</td><td>482</td></tr>
+                    <tr><td>Papa</td><td>3</td><td>0.081</td><td>0.038</td><td>1.061</td><td>0.296</td><td>0.298</td><td>0.6</td><td>38</td><td>19.7</td><td>0.01</td><td>2.2</td></tr>
+                    <tr><td>Batata</td><td>709</td><td>0.078</td><td>0.033</td><td>0.557</td><td>0.800</td><td>0.209</td><td>0.6</td><td>23</td><td>2.4</td><td>0.26</td><td>1.8</td></tr>
+                    <tr><td>Calabaza (Zapallo)</td><td>369</td><td>0.053</td><td>0.110</td><td>0.513</td><td>0.400</td><td>0.044</td><td>0.6</td><td>27</td><td>21</td><td>1.29</td><td>18.2</td></tr>
+                    <tr><td>Brócoli</td><td>31</td><td>0.071</td><td>0.117</td><td>0.639</td><td>0.573</td><td>0.175</td><td>0.6</td><td>63</td><td>89.2</td><td>1.64</td><td>101</td></tr>
+                    <tr><td>Coliflor</td><td>0</td><td>0.057</td><td>0.062</td><td>0.507</td><td>0.667</td><td>0.184</td><td>0.6</td><td>57</td><td>48.2</td><td>0.08</td><td>15.5</td></tr>
+                    <tr><td>Repollo</td><td>5</td><td>0.061</td><td>0.040</td><td>0.234</td><td>0.211</td><td>0.124</td><td>0.6</td><td>43</td><td>36.6</td><td>0.15</td><td>76</td></tr>
+                    <tr><td>Rábano</td><td>7</td><td>0.03</td><td>0.04</td><td>0.3</td><td>0.2</td><td>0.1</td><td>0.6</td><td>28</td><td>14.8</td><td>0.05</td><td>1.5</td></tr>
+                    <tr><td>Nabo</td><td>5</td><td>0.04</td><td>0.05</td><td>0.5</td><td>0.3</td><td>0.2</td><td>0.6</td><td>15</td><td>21</td><td>0.1</td><td>2.0</td></tr>
+                    <tr><td>Coles de Bruselas</td><td>38</td><td>0.07</td><td>0.1</td><td>0.6</td><td>0.4</td><td>0.3</td><td>0.6</td><td>47</td><td>85</td><td>0.88</td><td>177</td></tr>
+                </tbody>
+            </table><br>
+        </div><br>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#tablaVitaminas').DataTable({
+                paging: false, // Sin paginación
+                searching: false, // Búsqueda desactivada
+                ordering: true, // Ordenamiento activado
+                info: false // Sin mensaje "Mostrando X de Y"
+            });
+        });
+    </script>
+
+</body>
+</html>

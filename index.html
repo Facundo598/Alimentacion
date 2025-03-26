@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;margin: 0;padding: 0;background-color: #85929e ;}
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-bottom: 2px solid #005ea2;
+            background-image: url('Img/LogoSuperior.jpg'); /* Aquí va la URL de tu logo */
+            background-position: center; /* Centra la imagen en el contenedor */
+            background-repeat: no-repeat; /* No repetirá la imagen */
+            background-size: cover; /* Asegura que la imagen cubra el área disponible */
+            height: 100px; /* Ajusta la altura de la cabecera */
+            width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+        }
+        .header h1 {font-size: 24px;color: #333;margin: 0;flex-grow: 1;text-align: center;}
+        .button-container {display: flex;justify-content: center;gap: 20px;margin-top: 50px;}
+        .button {display: flex;flex-direction: column;align-items: center;text-decoration: none;
+            color: black;background-color: #d5f5e3;padding: 15px;
+            border-radius: 10px;box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);width: 150px;transition: transform 0.2s;}
+        .button:hover {transform: scale(1.1);}
+        .button img {width: 100px;height: 100px;margin-bottom: 10px;}
+        .table-container {overflow-x: auto; /* Desplaz horizontal móviles */}
+        table {width: 90%;border-collapse: collapse;margin-top: 10px; margin-left: auto;
+            margin-right: auto;}
+        th, td {border: 1px solid black;padding: 8px;text-align: center;}
+        th {background-color: #239b56;color: white;}
+        tbody tr:nth-child(even) {background-color: #e5e7e9;}
+
+        /* Diseño responsive */
+        @media (max-width: 600px) {
+            body {margin: 10px;}
+            .container {padding: 10px;}
+            th, td {padding: 6px;font-size: 14px;}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mi Página Web</h1>
+    </div><br><br>
+  
+  <div class="table-container" style="width: 90%; background: #d5f5e3;border-radius: 10px;text-align: center;margin-left: auto;margin-right: auto;">
+  	<h2>Valores Diarios Recomendados de Vitaminas (Adulto Promedio)</h2>
+  			<table>
+                <thead>
+                    <tr>
+                        <th>Vitamina</th>
+                        <th>Valor Diario Recomendado</th>
+                        <th>Funciones Principales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Vitamina A</td><td>900 µg</td><td>Visión, piel y función inmune</td></tr>
+                    <tr><td>Vitamina B1 (Tiamina)</td><td>1.2 mg</td><td>Metabolismo de energía</td></tr>
+                    <tr><td>Vitamina B2 (Riboflavina)</td><td>1.3 mg</td><td>Producción de energía y antioxidantes</td></tr>
+                    <tr><td>Vitamina B3 (Niacina)</td><td>16 mg</td><td>Digestión, piel y sistema nervioso</td></tr>
+                    <tr><td>Vitamina B5 (Ácido pantoténico)</td><td>5 mg</td><td>Producción de hormonas y energía</td></tr>
+                    <tr><td>Vitamina B6</td><td>1.3 mg</td><td>Metabolismo de proteínas y función nerviosa</td></tr>
+                    <tr><td>Vitamina B7 (Biotina)</td><td>30 µg</td><td>Salud del cabello, piel y uñas</td></tr>
+                    <tr><td>Vitamina B9 (Ácido fólico)</td><td>400 µg</td><td>Formación de ADN y células sanguíneas</td></tr>
+                    <tr><td>Vitamina B12</td><td>2.4 µg</td><td>Formación de glóbulos rojos y función nerviosa</td></tr>
+                    <tr><td>Vitamina C</td><td>90 mg</td><td>Antioxidante, sistema inmune y piel</td></tr>
+                    <tr><td>Vitamina D</td><td>15 µg</td><td>Salud ósea y sistema inmune</td></tr>
+                    <tr><td>Vitamina E</td><td>15 mg</td><td>Protección celular y antioxidante</td></tr>
+                  	<tr><td>Vitamina K</td><td>120 µg</td><td>Coagulación de la sangre y salud ósea</td></tr>
+                </tbody>
+            </table><br>
+    </div>
+  
+  
+  
+  
+  
+    <div class="button-container">
+	    <a href="VitFrutas.html" class="button" target="_blank">
+            <img src="Img/Frutas.jpg" alt="Frutas">
+            <span style="text-align: center">Vitaminas en Frutas</span>
+        </a>
+        <a href="VitLegumbres.html" class="button" target="_blank">
+            <img src="Img/Legumbres.jpg" alt="Legumbres">
+            <span style="text-align: center">Vitaminas en Legumbres</span>
+        </a>
+        <a href="VitVerduras.html" class="button" target="_blank">
+            <img src="Img/Verduras.jpg" alt="Verduras">
+            <span style="text-align: center">Vitaminas en Verduras</span>
+        </a>
+    </div>
+  	<div class="button-container">
+        <a href="" class="button" target="_blank">
+            <img src="" alt="">
+            <span>Nada Aun</span>
+        </a>
+        <a href="" class="button" target="_blank">
+            <img src="" alt="">
+            <span>Nada Aun</span>
+        </a>
+        <a href="" class="button" target="_blank">
+            <img src="" alt="">
+            <span>Nada Aun</span>
+        </a>
+    </div>
+
+    <div class="content">
+        <p>Bienvenido a mi sitio web.</p>
+    </div>
+
+</body>
+</html>

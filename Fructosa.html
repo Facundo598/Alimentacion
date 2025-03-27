@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitaminas en Frutas</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <style>
+        body {font-family: Arial, sans-serif;margin: 20px;
+            text-align: left;background-color: #85929e;font-size: 18px;}
+        .container {max-width: 100%;margin: 0 auto;padding: 15px;background: white;
+        border-radius: 10px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        .table-wrapper {overflow-x: auto;}
+        table {width: 100%;border-collapse: collapse;min-width: 600px;}
+        th, td {border: 1px solid black;padding: 8px;text-align: center;font-size: 18px;}
+        th {background-color: #f06292;}
+        .narrow {width: 50px; /* Columnas más angostas */}
+        @media screen and (max-width: 768px) {th, td {font-size: 18px;padding: 6px;}}
+    </style>
+</head>
+<body>
+  
+  
+  	<div>
+    <h2>✅ Beneficios de la fructosa (en frutas naturales)</h2>
+    <p>La fructosa en frutas enteras es saludable porque se combina con fibra, vitaminas y antioxidantes, regulando su absorción y evitando picos de azúcar en sangre.</p>
+    <ul>
+        <li>✔ No causa picos de glucosa abruptos.</li>
+        <li>✔ Aporta energía natural, ideal para deportistas.</li>
+        <li>✔ La fibra favorece la saciedad y la salud intestinal.</li>
+    </ul>
+
+    <h2>❌ Fructosa en exceso o en productos procesados</h2>
+    <p>El problema surge con el consumo excesivo de fructosa en jarabes de maíz alto en fructosa, presente en bebidas azucaradas y productos ultraprocesados.</p>
+    <ul>
+        <li>⚠ Puede favorecer la resistencia a la insulina (riesgo de diabetes tipo 2).</li>
+        <li>⚠ Sobrecarga el hígado, favoreciendo el hígado graso.</li>
+        <li>⚠ Aumenta el riesgo de obesidad y enfermedades cardiovasculares.</li>
+    </ul>
+
+    <h2>🔍 Clasificación de fructosa en frutas</h2>
+    <ul>
+        <li>🔴 <b>Alto en fructosa</b> (mayor de 10g/100g) – Consumo moderado.</li>
+        <li>🟠 <b>Moderado en fructosa</b> (entre 3-10g/100g) – Consumo con control.</li>
+        <li>🟢 <b>Bajo en fructosa</b> (menor de 3g/100g) – Consumo libre.</li>
+    </ul>
+	</div>
+
+
+    <div class="container">
+        <div class="table-wrapper">
+            <table id="tablaFructosa">
+              <thead>
+                  <tr>
+                      <th>Fruta</th>
+                      <th>Carbohidratos (g/100g)</th>
+                      <th>Fructosa (g/100g)</th>
+                      <th>Clasificación</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr><td>Manzana roja</td><td>13.8</td><td>5.9</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Manzana verde</td><td>11.3</td><td>4.0</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Pera</td><td>15.5</td><td>6.2</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Banana</td><td>22.8</td><td>4.9</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Mandarina</td><td>13.0</td><td>2.4</td><td style="background-color: lightgreen;">🟢 Bajo</td></tr>
+                  <tr><td>Naranja</td><td>11.8</td><td>3.0</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Limón</td><td>9.3</td><td>1.2</td><td style="background-color: lightgreen;">🟢 Bajo</td></tr>
+                  <tr><td>Uvas</td><td>18.1</td><td>8.1</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Uvas pasas</td><td>79.2</td><td>30.1</td><td style="background-color: red;">🔴 Alto</td></tr>
+                  <tr><td>Mango</td><td>15.0</td><td>4.7</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Melón</td><td>7.6</td><td>1.8</td><td style="background-color: lightgreen;">🟢 Bajo</td></tr>
+                  <tr><td>Sandía</td><td>7.5</td><td>3.4</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Frutilla</td><td>7.7</td><td>2.4</td><td style="background-color: lightgreen;">🟢 Bajo</td></tr>
+                  <tr><td>Cereza</td><td>16.0</td><td>6.1</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Ciruela</td><td>11.4</td><td>3.1</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Durazno</td><td>9.5</td><td>1.5</td><td style="background-color: lightgreen;">🟢 Bajo</td></tr>
+                  <tr><td>Higo</td><td>19.2</td><td>8.1</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Piña</td><td>13.1</td><td>2.1</td><td style="background-color: lightgreen;">🟢 Bajo</td></tr>
+                  <tr><td>Kiwi</td><td>14.7</td><td>4.3</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Arándano</td><td>14.5</td><td>3.6</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Coco</td><td>15.2</td><td>1.5</td><td style="background-color: lightgreen;">🟢 Bajo</td></tr>
+                  <tr><td>Granada</td><td>18.7</td><td>6.0</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Maracuyá</td><td>23.4</td><td>4.3</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Moras</td><td>9.6</td><td>2.4</td><td style="background-color: lightgreen;">🟢 Bajo</td></tr>
+                  <tr><td>Papaya</td><td>10.8</td><td>3.7</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Uva rosada</td><td>17.1</td><td>7.6</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Uva blanca</td><td>16.8</td><td>7.4</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+                  <tr><td>Uva negra</td><td>15.9</td><td>6.6</td><td style="background-color: orange;">🟠 Moderado</td></tr>
+              </tbody>
+
+       
+            </table><br>
+        </div><br>
+    </div>
+  
+
+  
+
+    <script>
+        $(document).ready(function() {
+            $('#tablaFructosa').DataTable({
+                paging: false, // Sin paginación
+                searching: false, // Búsqueda desactivada
+                ordering: true, // Ordenamiento activado
+                info: false // Sin mensaje "Mostrando X de Y"
+            });
+        });
+    </script>
+
+</body>
+</html>

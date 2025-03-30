@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <style>
+        body {font-family: Arial, sans-serif;margin: 20px;
+            text-align: left;background-color: #85929e;font-size: 18px;}
+        .container {max-width: 100%;margin: 0 auto;padding: 15px;background: white;
+        border-radius: 10px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        .table-wrapper {overflow-x: auto;}
+        table {width: 80%;border-collapse: collapse;min-width: 500px;min-width: 400px;margin: auto;}
+        th, td {border: 1px solid black;padding: 8px;text-align: center;font-size: 18px;}
+        th {background-color: #f06292;}
+        .narrow {width: 50px; /* Columnas más angostas */}
+        @media screen and (max-width: 768px) {th, td {font-size: 18px;padding: 6px;}}
+    </style>
+</head>
+<body>
+  <h2>✅ Beneficios del Calcio</h2>
+
+    <p>El calcio es un mineral esencial para muchas funciones del cuerpo. Sus principales beneficios incluyen:</p>
+    
+    <ul style="list-style-type: none; padding: 10;">
+        <li>✅ <strong>Salud ósea y dental:</strong> Es el principal componente de huesos y dientes, ayudando a mantener su fortaleza y prevenir enfermedades como la osteoporosis.</li>
+        <li>✅ <strong>Función muscular:</strong> Permite la contracción y relajación de los músculos, incluyendo el corazón.</li>
+        <li>✅ <strong>Sistema nervioso:</strong> Es clave para la transmisión de impulsos nerviosos, ayudando en la comunicación entre células.</li>
+        <li>✅ <strong>Coagulación sanguínea:</strong> Participa en la formación de coágulos para detener sangrados.</li>
+        <li>✅ <strong>Equilibrio del pH y metabolismo:</strong> Contribuye a mantener un equilibrio ácido-base adecuado en el cuerpo.</li>
+        <li>✅ <strong>Liberación de hormonas y enzimas:</strong> Es crucial para muchas funciones metabólicas y hormonales.</li>
+    </ul>
+
+    <p style="background-color: #ffffcc; padding: 10px; border-radius: 5px;">
+        📌 <strong>Importante:</strong> Para que el cuerpo absorba bien el calcio, es necesario contar con vitamina D, que se obtiene de la exposición al sol y algunos alimentos como pescados grasos y huevos.
+    </p>
+  <h2>🔍 Clasificación de Índice Glucémico (IG)</h2>
+
+    <p>Mide qué tan rápido un alimento eleva la glucosa en sangre en comparación con la glucosa pura (que tiene IG = 100).</p>
+
+    <ul style="list-style-type: none; padding: 10;">
+        <li>🟢 <strong>Verde:</strong> Índice glucémico bajo (IG ≤ 55)</li>
+        <li>🟡 <strong>Amarillo:</strong> Índice glucémico medio (56 ≤ IG ≤ 69)</li>
+        <li>🔴 <strong>Rojo:</strong> Índice glucémico alto (IG ≥ 70)</li>
+    </ul>
+
+
+    <div class="container">
+        <div class="table-wrapper">
+            <table id="tablaFuncion">
+            <thead>
+                <tr>
+                    <th>Alimento</th>
+                    <th>Calcio (mg/100g)</th>
+                    <th>Índice Glucémico (IG)</th>
+                    <th>% Consumo Diario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Leche (entera)</td><td>125</td><td style="background-color: #FFFF00;">27</td><td>12.5%</td></tr>
+                <tr><td>Yogur (natural)</td><td>150</td><td style="background-color: #FFFF00;">35</td><td>15%</td></tr>
+                <tr><td>Queso cheddar</td><td>700</td><td style="background-color: #00FF00;">0</td><td>70%</td></tr>
+                <tr><td>Almendras</td><td>264</td><td style="background-color: #00FF00;">15</td><td>26.4%</td></tr>
+                <tr><td>Brócoli (cocido)</td><td>47</td><td style="background-color: #00FF00;">15</td><td>4.7%</td></tr>
+                <tr><td>Hojas de nabo (cocidas)</td><td>150</td><td style="background-color: #00FF00;">15</td><td>15%</td></tr>
+                <tr><td>Tocino de cerdo</td><td>22</td><td style="background-color: #00FF00;">0</td><td>2.2%</td></tr>
+                <tr><td>Tofu</td><td>350</td><td style="background-color: #00FF00;">15</td><td>35%</td></tr>
+                <tr><td>Higos secos</td><td>162</td><td style="background-color: #FFFF00;">29</td><td>16.2%</td></tr>
+                <tr><td>Semillas de sésamo</td><td>975</td><td style="background-color: #00FF00;">0</td><td>97.5%</td></tr>
+                <tr><td>Espinacas (cocidas)</td><td>136</td><td style="background-color: #00FF00;">15</td><td>13.6%</td></tr>
+                <tr><td>Acelga</td><td>51</td><td style="background-color: #00FF00;">15</td><td>5.1%</td></tr>
+                <tr><td>Soya (cocida)</td><td>277</td><td style="background-color: #00FF00;">15</td><td>27.7%</td></tr>
+                <tr><td>Aguacate</td><td>12</td><td style="background-color: #00FF00;">15</td><td>1.2%</td></tr>
+                <tr><td>Naranjas</td><td>40</td><td style="background-color: #FFFF00;">40</td><td>4%</td></tr>
+                <tr><td>Frijoles negros (cocidos)</td><td>100</td><td style="background-color: #FFFF00;">30</td><td>10%</td></tr>
+                <tr><td>Col rizada (kale, cocida)</td><td>150</td><td style="background-color: #00FF00;">15</td><td>15%</td></tr>
+                <tr><td>Espinaca cruda</td><td>99</td><td style="background-color: #00FF00;">15</td><td>9.9%</td></tr>
+                <tr><td>Avellanas</td><td>114</td><td style="background-color: #00FF00;">15</td><td>11.4%</td></tr>
+                <tr><td>Nueces</td><td>98</td><td style="background-color: #00FF00;">15</td><td>9.8%</td></tr>
+                <tr><td>Pistachos</td><td>105</td><td style="background-color: #00FF00;">15</td><td>10.5%</td></tr>
+                <tr><td>Cacahuetes (Mani)</td><td>92</td><td style="background-color: #00FF00;">14</td><td>9.2%</td></tr>
+            </tbody>
+       
+            </table><br>
+        </div><br>
+    </div>
+  
+    <script>
+        $(document).ready(function() {
+            $('#tablaFuncion').DataTable({
+                paging: false, // Sin paginación
+                searching: false, // Búsqueda desactivada
+                ordering: true, // Ordenamiento activado
+                info: false // Sin mensaje "Mostrando X de Y"
+            });
+        });
+    </script>
+
+</body>
+</html>

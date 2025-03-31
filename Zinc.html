@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinc</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <style>
+        body {font-family: Arial, sans-serif;margin: 20px;
+            text-align: left;background-color: #85929e;font-size: 18px;}
+        .container {max-width: 100%;margin: 0 auto;padding: 15px;background: white;
+        border-radius: 10px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        .table-wrapper {overflow-x: auto;}
+        table {width: 80%;border-collapse: collapse;min-width: 500px;min-width: 400px;margin: auto;}
+        th, td {border: 1px solid black;padding: 8px;text-align: center;font-size: 18px;}
+        th {background-color: #f06292;}
+        .narrow {width: 50px; /* Columnas más angostas */}
+        @media screen and (max-width: 768px) {th, td {font-size: 18px;padding: 6px;}}
+      /*  style="background-color: #00FF00;"> Verde */
+      /*  style="background-color: #FF0000;"> Rojo */
+      /*  style="background-color: #FFFF00;"> Amarillo */
+    </style>
+</head>
+<body>
+  <h2>✅ Beneficios del Zinc</h2>
+  <p>El zinc es un mineral esencial que juega un papel clave en varias funciones biológicas en el cuerpo. Sus principales beneficios incluyen:</p>
+  <ul style="list-style-type: none; padding: 10px;">
+  <li>✅ <strong>Refuerzo del sistema inmunológico:</strong> El zinc es crucial para el funcionamiento adecuado del sistema inmunitario y ayuda en la producción de células de defensa contra infecciones.</li>
+  <li>✅ <strong>Cicatrización de heridas:</strong> El zinc favorece la cicatrización de las heridas al apoyar la síntesis de proteínas y la división celular.</li>
+  <li>✅ <strong>Función cognitiva:</strong> Ayuda en el desarrollo y mantenimiento de la función cerebral, promoviendo la memoria y el aprendizaje.</li>
+  <li>✅ <strong>Síntesis de proteínas y ADN:</strong> Participa en la creación de proteínas y en la replicación del ADN, procesos esenciales para el crecimiento y la regeneración celular.</li>
+  <li>✅ <strong>Protección antioxidante:</strong> Actúa como un antioxidante, protegiendo las células del daño causado por los radicales libres.</li>
+  <li>✅ <strong>Apoyo al metabolismo:</strong> El zinc contribuye a la regulación de varios procesos metabólicos, incluyendo la síntesis de insulina y el metabolismo de los carbohidratos.</li>
+  <li>✅ <strong>Mantenimiento de la piel:</strong> Ayuda a mantener la salud de la piel y es importante en el tratamiento de afecciones dermatológicas como el acné y la psoriasis.</li>
+</ul>
+
+
+  <h2>🔍 Clasificación de Índice Glucémico (IG)</h2>
+
+    <p>Mide qué tan rápido un alimento eleva la glucosa en sangre en comparación con la glucosa pura (que tiene IG = 100).</p>
+
+    <ul style="list-style-type: none; padding: 10;">
+        <li>🟢 <strong>Verde:</strong> Índice glucémico bajo (IG ≤ 55)</li>
+        <li>🟡 <strong>Amarillo:</strong> Índice glucémico medio (56 ≤ IG ≤ 69)</li>
+        <li>🔴 <strong>Rojo:</strong> Índice glucémico alto (IG ≥ 70)</li>
+    </ul>
+  
+  
+  <h2>🔍 Carga Glucémica (CG)</h2>
+  <p>Mide el impacto real teniendo en cuenta la cantidad de carbohidratos. Se calcula como:</p>
+
+  <p><strong>𝐶𝐺 = 𝐼𝐺 × gramos de carbohidratos / 100g</strong></p>
+
+    <ul style="list-style-type: none; padding: 10;">
+        <li>🟢 <strong>Baja:</strong> -10</li>
+        <li>🟡 <strong>Media:</strong> 11-19</li>
+        <li>🔴 <strong>Alta:</strong> +20</li>
+    </ul>
+
+    <div class="container">
+        <div class="table-wrapper">
+            <table id="tablaFuncion"> 
+
+    <thead>
+        <tr>
+            <th>Alimento</th>
+            <th>Zinc (mg/100g)</th>
+            <th>Carbohidratos (g/100g)</th>
+            <th>Índice Glucémico (IG)</th>
+            <th>Carga Glucémica (CG)</th>
+            <th>% Consumo Diario</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr><td>Carne de res</td><td>4.0</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>30%</td></tr>
+        <tr><td>Carne de cerdo</td><td>2.9</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>20%</td></tr>
+        <tr><td>Ostras</td><td>39.0</td><td>4.0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>200%</td></tr>
+        <tr><td>Almejas</td><td>4.0</td><td>3.6</td><td>0</td><td style="background-color: #00FF00;">0</td><td>30%</td></tr>
+        <tr><td>Mejillones</td><td>3.0</td><td>4.2</td><td>0</td><td style="background-color: #00FF00;">0</td><td>25%</td></tr>
+        <tr><td>Camarones</td><td>1.3</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>10%</td></tr>
+        <tr><td>Garbanzos</td><td>2.9</td><td>27.4</td><td>28</td><td style="background-color: #00FF00;">8</td><td>20%</td></tr>
+        <tr><td>Lentejas</td><td>3.3</td><td>20.0</td><td>21</td><td style="background-color: #00FF00;">4</td><td>18%</td></tr>
+        <tr><td>Frijoles</td><td>2.5</td><td>23.7</td><td>30</td><td style="background-color: #00FF00;">7</td><td>14%</td></tr>
+        <tr><td>Nuez de cajú</td><td>5.0</td><td>30.0</td><td>22</td><td style="background-color: #00FF00;">7</td><td>30%</td></tr>
+        <tr><td>Almendras</td><td>3.7</td><td>22.0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>20%</td></tr>
+        <tr><td>Nueces de Brasil</td><td>4.0</td><td>12.0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>22%</td></tr>
+        <tr><td>Pistachos</td><td>5.0</td><td>28.0</td><td>15</td><td style="background-color: #00FF00;">4</td><td>28%</td></tr>
+        <tr><td>Semillas de calabaza</td><td>8.5</td><td>15.0</td><td>25</td><td style="background-color: #00FF00;">4</td><td>47%</td></tr>
+        <tr><td>Semillas de sésamo</td><td>14.6</td><td>23.4</td><td>35</td><td style="background-color: #00FF00;">8</td><td>81%</td></tr>
+        <tr><td>Semillas de girasol</td><td>5.0</td><td>20.0</td><td>35</td><td style="background-color: #00FF00;">7</td><td>28%</td></tr>
+        <tr><td>Queso</td><td>3.0</td><td>1.3</td><td>0</td><td style="background-color: #00FF00;">0</td><td>20%</td></tr>
+        <tr><td>Huevos</td><td>1.3</td><td>1.1</td><td>0</td><td style="background-color: #00FF00;">0</td><td>10%</td></tr>
+        <tr><td>Avena</td><td>2.0</td><td>66.3</td><td>55</td><td style="background-color: #FFFF00;">16</td><td>15%</td></tr>
+        <tr><td>Espinacas</td><td>0.8</td><td>1.1</td><td>15</td><td style="background-color: #00FF00;">1</td><td>5%</td></tr>
+        <tr><td>Champiñones</td><td>1.3</td><td>3.3</td><td>15</td><td style="background-color: #00FF00;">1</td><td>8%</td></tr>
+        <tr><td>Yogur</td><td>1.0</td><td>4.0</td><td>35</td><td style="background-color: #FFFF00;">14</td><td>8%</td></tr>
+        <tr><td>Cacao oscuro</td><td>7.3</td><td>46.0</td><td>23</td><td style="background-color: #FFFF00;">11</td><td>50%</td></tr>
+        <tr><td>Chocolate amargo</td><td>6.0</td><td>46.0</td><td>23</td><td style="background-color: #FFFF00;">10</td><td>40%</td></tr>
+        <tr><td>Pan integral</td><td>2.9</td><td>43.0</td><td>51</td><td style="background-color: #FF0000;">22</td><td>20%</td></tr>
+        <tr><td>Arroz integral</td><td>2.0</td><td>23.0</td><td>50</td><td style="background-color: #FFFF00;">11</td><td>15%</td></tr>
+        <tr><td>Pollo</td><td>1.0</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>10%</td></tr>
+    </tbody>
+  
+            </table><br>
+        </div><br>
+    </div>
+  
+    <script>
+        $(document).ready(function() {
+            $('#tablaFuncion').DataTable({
+                paging: false, // Sin paginación
+                searching: false, // Búsqueda desactivada
+                ordering: true, // Ordenamiento activado
+                info: false // Sin mensaje "Mostrando X de Y"
+            });
+        });
+    </script>
+
+</body>
+</html>

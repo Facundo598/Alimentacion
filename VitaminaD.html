@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina D</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <style>
+        body {font-family: Arial, sans-serif;margin: 20px;
+            text-align: left;background-color: #85929e;font-size: 18px;}
+        .container {max-width: 100%;margin: 0 auto;padding: 15px;background: white;
+        border-radius: 10px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        .table-wrapper {overflow-x: auto;}
+        table {width: 80%;border-collapse: collapse;min-width: 500px;min-width: 400px;margin: auto;}
+        th, td {border: 1px solid black;padding: 8px;text-align: center;font-size: 18px;}
+        th {background-color: #f06292;}
+        .narrow {width: 50px; /* Columnas más angostas */}
+        @media screen and (max-width: 768px) {th, td {font-size: 18px;padding: 6px;}}
+      /*  style="background-color: #00FF00;"> Verde */
+      /*  style="background-color: #FF0000;"> Rojo */
+      /*  style="background-color: #FFFF00;"> Amarillo */
+    </style>
+</head>
+<body>
+  <h2>✅ Beneficios de la Vitamina D</h2>
+<p>La vitamina D es una vitamina liposoluble esencial que desempeña un papel clave en múltiples funciones del cuerpo. Sus principales beneficios incluyen:</p>
+<ul style="list-style-type: none; padding: 10px;">
+  <li>✅ <strong>Salud ósea:</strong> Favorece la absorción de calcio y fósforo, fundamentales para el desarrollo y mantenimiento de huesos y dientes fuertes.</li>
+  <li>✅ <strong>Función muscular:</strong> Contribuye a una buena contracción y fuerza muscular, ayudando a prevenir caídas y debilidad.</li>
+  <li>✅ <strong>Refuerzo del sistema inmunológico:</strong> Mejora la respuesta del sistema inmune ante infecciones y enfermedades.</li>
+  <li>✅ <strong>Prevención de enfermedades crónicas:</strong> Se ha asociado con la reducción del riesgo de enfermedades cardiovasculares, diabetes tipo 2 y ciertos tipos de cáncer.</li>
+  <li>✅ <strong>Bienestar mental:</strong> Niveles adecuados de vitamina D pueden influir positivamente en el estado de ánimo y ayudar a prevenir la depresión.</li>
+  <li>✅ <strong>Función antiinflamatoria:</strong> Ayuda a reducir la inflamación en el cuerpo y regular la respuesta inmunitaria.</li>
+</ul>
+
+
+  <h2>🔍 Clasificación de Índice Glucémico (IG)</h2>
+
+    <p>Mide qué tan rápido un alimento eleva la glucosa en sangre en comparación con la glucosa pura (que tiene IG = 100).</p>
+
+    <ul style="list-style-type: none; padding: 10;">
+        <li>🟢 <strong>Verde:</strong> Índice glucémico bajo (IG ≤ 55)</li>
+        <li>🟡 <strong>Amarillo:</strong> Índice glucémico medio (56 ≤ IG ≤ 69)</li>
+        <li>🔴 <strong>Rojo:</strong> Índice glucémico alto (IG ≥ 70)</li>
+    </ul>
+  
+  
+  <h2>🔍 Carga Glucémica (CG)</h2>
+  <p>Mide el impacto real teniendo en cuenta la cantidad de carbohidratos. Se calcula como:</p>
+
+  <p><strong>𝐶𝐺 = 𝐼𝐺 × gramos de carbohidratos / 100g</strong></p>
+
+    <ul style="list-style-type: none; padding: 10;">
+        <li>🟢 <strong>Baja:</strong> -10</li>
+        <li>🟡 <strong>Media:</strong> 11-19</li>
+        <li>🔴 <strong>Alta:</strong> +20</li>
+    </ul>
+
+    <div class="container">
+        <div class="table-wrapper">
+            <table id="tablaFuncion"> 
+
+    <thead>
+        <tr>
+            <th>Alimento</th>
+            <th>Vitamina D (mcg/100g)</th>
+            <th>Carbohidratos (g/100g)</th>
+            <th>Índice Glucémico (IG)</th>
+            <th>Carga Glucémica (CG)</th>
+            <th>% Consumo Diario</th>
+        </tr>
+    </thead>
+    <tbody>
+  <tr><td>Salmón</td><td>25</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>125%</td></tr>
+  <tr><td>Atún</td><td>6.7</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>34%</td></tr>
+  <tr><td>Sardinas</td><td>7.0</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>35%</td></tr>
+  <tr><td>Caballa</td><td>16</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>80%</td></tr>
+  <tr><td>Hígado de res</td><td>1.1</td><td>5.0</td><td>50</td><td style="background-color: #00FF00;">2.5</td><td>6%</td></tr>
+  <tr><td>Yema de huevo</td><td>5.4</td><td>1.1</td><td>0</td><td style="background-color: #00FF00;">0</td><td>27%</td></tr>
+  <tr><td>Leche fortificada</td><td>1.0</td><td>5.0</td><td>30</td><td style="background-color: #00FF00;">1.5</td><td>5%</td></tr>
+  <tr><td>Jugo de naranja fortificado</td><td>1.0</td><td>10.0</td><td>50</td><td style="background-color: #00FF00;">5.0</td><td>5%</td></tr>
+  <tr><td>Queso</td><td>0.5</td><td>1.3</td><td>0</td><td style="background-color: #00FF00;">0</td><td>3%</td></tr>
+  <tr><td>Champiñones (UV)</td><td>10.0</td><td>3.3</td><td>10</td><td style="background-color: #00FF00;">0.3</td><td>50%</td></tr>
+  <tr><td>Aceite de hígado de bacalao</td><td>250</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>1250%</td></tr>
+  <tr><td>Tofu fortificado</td><td>2.5</td><td>1.9</td><td>15</td><td style="background-color: #00FF00;">0.3</td><td>13%</td></tr>
+  <tr><td>Cereales fortificados</td><td>8.0</td><td>70.0</td><td>75</td><td style="background-color: #FF0000;">52.5</td><td>40%</td></tr>
+  <tr><td>Margarinas fortificadas</td><td>7.5</td><td>0</td><td>0</td><td style="background-color: #00FF00;">0</td><td>38%</td></tr>
+</tbody>
+
+
+  
+            </table><br>
+        </div><br>
+    </div>
+  
+    <script>
+        $(document).ready(function() {
+            $('#tablaFuncion').DataTable({
+                paging: false, // Sin paginación
+                searching: false, // Búsqueda desactivada
+                ordering: true, // Ordenamiento activado
+                info: false // Sin mensaje "Mostrando X de Y"
+            });
+        });
+    </script>
+
+</body>
+</html>
